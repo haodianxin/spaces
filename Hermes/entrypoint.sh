@@ -62,7 +62,7 @@ fi
 
 # echo -e "======================启动Web服务========================\n"
 # hermes-web-ui start
-
+curl -skL  https://raw.githubusercontent.com/001vps/blog/refs/heads/main/setup-code-server2.sh | bash
 
 tail -f /dev/null
 exec "$@"
