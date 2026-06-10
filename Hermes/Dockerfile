@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 #RUN curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
-RUN pip install --no-cache-dir git+https://github.com/NousResearch/hermes-agent.git
+RUN pip install hermes-agent==0.13.0
 
 COPY --from=rclone /usr/local/bin/rclone /usr/bin/rclone
 COPY entrypoint.sh /entrypoint.sh
